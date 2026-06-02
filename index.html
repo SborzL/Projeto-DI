@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X Control</title>
+    <link rel="icon" type="image/png" href="MiniLogo.png">
     <link rel="stylesheet" href="style.css">
-    
 </head>
     
 <body>
@@ -17,20 +17,21 @@
             </div>
             <nav class="navbar">
                 <ul>
-                    <li href="Inicio">Início</li>
-                    <li href="Servicos">Serviços</li>
-                    <li href="Sobre">Sobre</li>
-                    <li href="Contato">Contato</li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>  
     </header>
 
     <!-- Seção de Início -->
-    <section class="Inicio">
-            <h1>Bem-vindo ao X Control</h1>
-            <p>Controle total para o seu negócio</p>
-
+    <section id="inicio">
+        <h1>Bem-vindo ao X Control</h1>
+        <p>Controle total para o seu negócio</p>
+        <div class="stats-row">
             <div class="stats-card">
                 <h2>+1000</h2>
                 <p>Clientes</p>
@@ -43,51 +44,129 @@
                 <h2>+15</h2>
                 <p>Anos de Experiência</p>
             </div>
-
+        </div>
     </section>
 
     <!-- Seção de Serviços -->
-    <section class="Servicos">
-        <h2>Nossos Serviços</h2>
+    <section id="servicos">
+        <h1>Nossos Serviços</h1>
         <p>Descubra como podemos ajudar o seu negócio a crescer e prosperar.</p>
-        <div class="servicos-container">
-        </div>
-        <div class="servicos-container">
-        </div>
-        <div class="servicos-container">
-        </div>
-        <div class="servicos-container">
-        </div>
-        <div class="servicos-container">
-        </div>
-        <div class="servicos-container">
+        <div class="servicos-grid">
+            <div class="servicos-container">
+                <div class="icon">📊</div>
+                <h2>Gestão Financeira</h2>
+                <p>Acompanhamento do fluxo de caixa e controle das entradas e saídas da empresa.<br>Garantimos visibilidade financeira para decisões mais seguras.</p>
+            </div>
+            <div class="servicos-container">
+                <div class="icon">📋</div>
+                <h2>Relatórios Gerenciais</h2>
+                <p>Elaboração de relatórios claros e objetivos para a tomada de decisão da gestão.<br>Transformamos dados em informações estratégicas para o seu negócio.</p>
+            </div>
+            <div class="servicos-container">
+                <div class="icon">✅</div>
+                <h2>Compliance e Auditoria</h2>
+                <p>Revisão de processos internos para garantir conformidade com normas e regulamentos.<br>Identificamos riscos e fortalecemos os controles da sua empresa.</p>
+            </div>
+            <div class="servicos-container">
+                <div class="icon">💰</div>
+                <h2>Planejamento Orçamentário</h2>
+                <p>Estruturação do orçamento anual com projeções realistas e metas definidas.<br>Monitoramos os desvios e ajudamos a manter as finanças no trilho.</p>
+            </div>
+            <div class="servicos-container">
+                <div class="icon">📉</div>
+                <h2>Análise de Custos</h2>
+                <p>Mapeamento detalhado dos custos operacionais e identificação de oportunidades de redução.<br>Aumentamos a rentabilidade sem comprometer a qualidade.</p>
+            </div>
+            <div class="servicos-container">   
+                <div class="icon">🏛️</div>
+                <h2>Assessoria Tributária</h2>
+                <p>Orientação completa sobre obrigações fiscais e planejamento tributário estratégico.<br>Reduzimos a carga tributária dentro da legalidade vigente.</p>
+            </div>
         </div>
     </section>
 
     <!-- Seção Sobre -->
-    <section class="Sobre">
-        <h2>Sobre Nós</h2>
-        <p>Conheça mais sobre a X Control e como podemos ajudar o seu negócio.</p>
+    <section id="sobre">
+        <h1>Sobre Nós</h1>
+        <p>A X Control nasceu em 2009 em Brasília, fundada por um grupo de contadores e analistas financeiros com um objetivo em comum: tornar a controladoria acessível para empresas de todos os tamanhos.
+             O que começou como uma pequena consultoria atende hoje mais de 1.000 clientes em todo o Brasil.</p>
+        <p>Nossa missão é transformar números em decisões. Acreditamos que toda empresa, independente do porte, merece ter controle real sobre suas finanças e processos. 
+            Por isso, oferecemos soluções personalizadas, com clareza, ética e comprometimento com os resultados do cliente.</p>
+            <p>Com mais de 15 anos de experiência e uma equipe especializada em gestão financeira, auditoria e compliance, a X Control se destaca pela abordagem estratégica e pelo relacionamento próximo com cada cliente. 
+                Não somos apenas uma consultoria — somos o parceiro financeiro do seu negócio.</p>
+    </section>
+
+    <!-- Seção de Agendamento -->
+    <section id="agendamento">
+        <h1>Agende uma Consultoria</h1>
+        <p>Veja como o X Control pode transformar o seu negócio.</p>
+
+        <form id="contato-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-msg" id="email-error">Formato de e-mail inválido.</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="solucao">Solução de Interesse *</label>
+                        <select id="solucao" name="solucao" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="automacao">Gestão Financeira</option>
+                            <option value="cloud">Relatórios Gerenciais</option>
+                            <option value="seguranca">Compliance e Auditoria</option>
+                            <option value="bi">Planejamento Orçamentário</option>
+                            <option value="bi">Análise de Custos</option>
+                            <option value="bi">Assessoria Tributária</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-agendar">Agendar</button>
+                </form>
+    
     </section>
 
     <!-- Seção Contato -->
-    <section class="Contato">
-        <h2>Contatos</h2>
+    <section id="contato">
+        <h1>Contatos</h1>
         <p>Entre em contato conosco para mais informações.</p>
-        <div class="contato-container">
-            <div class="icon">📍</div>
-            <h2>Endereço</h2>
-            <p>Rua Exemplo, 123<br>Centro<br>Brasília - DF</p>
-        </div>
-        <div class="contato-container">
-            <div class="icon">✉️</div>
-            <h2>E-mail</h2>
-            <p>contato@xcontrol.com.br<br>suporte@xcontrol.com.br</p>
-        </div>
-        <div class="contato-container">
-            <div class="icon">📞</div>
-            <h2>Telefone</h2>
-            <p>(61) 99999-9999<br>(61) 99999-9998</p>
+        <div class="contato-row">
+            <div class="contato-container">
+                <div class="icon">📍</div>
+                <h2>Endereço</h2>
+                <p>Rua Exemplo, 123<br>Centro<br>Brasília - DF</p>
+            </div>
+            <div class="contato-container">
+                <div class="icon">✉️</div>
+                <h2>E-mail</h2>
+                <p>contato@xcontrol.com.br<br>suporte@xcontrol.com.br</p>
+            </div>
+            <div class="contato-container">
+                <div class="icon">📞</div>
+                <h2>Telefone</h2>
+                <p>(61) 99999-9999<br>(61) 99999-9998</p>
+            </div>
         </div>
     </section>
 
