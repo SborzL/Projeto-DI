@@ -12,7 +12,7 @@ header {
     top: 0;
     z-index: 1000;
     transition: box-shadow 0.3s;
-    background-color: #dcfce7;
+    background-color: #14532d;
 }
 
 .header-container {
@@ -24,6 +24,10 @@ header {
     padding: 15px 50px;
     box-sizing: border-box;
     width: 100%;
+}
+
+header.scrolled{
+    box-shadow: 0 6px 18px #00000022;
 }
 
 .navbar {
@@ -47,14 +51,18 @@ header {
 
 .navbar ul a {
     text-decoration: none;
-    color: #14532d;
+    color: #dcfce7;
     font-weight: 600;
     font-size: 15px;
     transition: color 0.3s;
 }
 
 .navbar ul a:hover {
-    color: #16a34a;
+    color: #86efac;
+}
+
+.navbar ul a.active{
+    color: #86efac;
 }
 
 #inicio {
