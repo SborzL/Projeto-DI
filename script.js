@@ -16,7 +16,7 @@ const observer = new IntersectionObserver((entries) => {
             navLinks.forEach((link) => {
                 link.classList.remove('active');
 
-                if (link.getAttribute('href') === '#${id}') {
+                if (link.getAttribute('href') === `#${id}`) {
                     link.classList.add('active');
                 }
             });
@@ -28,4 +28,57 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => {
     observer.observe(section);
+});
+
+// Contador animado dos stats cards
+const contadores = document.querySelectorAll('.contador');
+
+const animarContador = (el) => {
+    const target = +el.getAttribute('data-target');
+    const duracao = 1000;
+    const incremento = target / (duracao / 16);
+    let atual = 0;
+
+    const atualizar = () => {
+        atual += incremento;
+        if (atual < target) {
+            el.textContent = Math.floor(atual);
+            requestAnimationFrame(atualizar);
+        } else {
+            el.textContent = target.toLocaleString('pt-BR');
+        }
+    };
+
+    atualizar();
+};
+
+const observerContador = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            animarContador(entry.target);
+            observerContador.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+contadores.forEach((contador) => {
+    observerContador.observe(contador);
+});
+
+// Animação de entrada dos cards de serviço
+const cards = document.querySelectorAll('.servicos-container');
+
+const observerCards = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visivel');
+            observerCards.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+cards.forEach((card) => {
+    observerCards.observe(card);
 });
