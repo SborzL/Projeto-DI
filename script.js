@@ -32,20 +32,21 @@ sections.forEach((section) => {
 
 // Contador animado dos stats cards
 const contadores = document.querySelectorAll('.contador');
-
 const animarContador = (el) => {
     const target = +el.getAttribute('data-target');
-    const duracao = 1000;
+    const prefixo = el.getAttribute('data-prefixo') || '';
+    const sufixo = el.getAttribute('data-sufixo') || '';
+    const duracao = 1400;
     const incremento = target / (duracao / 16);
     let atual = 0;
 
     const atualizar = () => {
         atual += incremento;
         if (atual < target) {
-            el.textContent = Math.floor(atual);
+            el.textContent = prefixo + Math.floor(atual).toLocaleString('pt-BR') + sufixo;
             requestAnimationFrame(atualizar);
         } else {
-            el.textContent = target.toLocaleString('pt-BR');
+            el.textContent = prefixo + target.toLocaleString('pt-BR') + sufixo;
         }
     };
 
@@ -82,3 +83,4 @@ const observerCards = new IntersectionObserver((entries) => {
 cards.forEach((card) => {
     observerCards.observe(card);
 });
+
