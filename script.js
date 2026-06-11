@@ -16,14 +16,15 @@ const observer = new IntersectionObserver((entries) => {
             navLinks.forEach((link) => {
                 link.classList.remove('active');
 
-                if (link.getAttribute('href') === `#${id}`) {
+                if (link.getAttribute('href') === `#${id}` || (id === 'inicio' && link.getAttribute('href') === '#')) {
                     link.classList.add('active');
                 }
             });
         }
     });
 },  {
-    threshold: 0.6
+    threshold: 0,
+    rootMargin: '-40% 0px -55% 0px'
 });
 
 sections.forEach((section) => {
