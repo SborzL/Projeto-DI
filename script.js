@@ -85,3 +85,21 @@ cards.forEach((card) => {
     observerCards.observe(card);
 });
 
+// Carrossel de depoimentos
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-slide');
+let indice = 0;
+
+function atualizarCarrossel() {
+    track.style.transform = `translateX(${-indice * 100}%)`;
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+    indice = (indice + 1) % slides.length;
+    atualizarCarrossel();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    indice = (indice - 1 + slides.length) % slides.length;
+    atualizarCarrossel();
+});

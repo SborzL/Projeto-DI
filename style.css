@@ -69,12 +69,35 @@ header.scrolled{
     background-color: #14532d;
     color: #FFFFFF;
     text-align: center;
-     min-height: 75vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 20px 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+#bg-inicio {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.inicio-frame {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    width: 100%;
+    padding: 60px 65px;
+    border-radius: 20px;
+    background: #0a2e1a;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid #86efac
 }
 
 .badge-inicio {
@@ -165,8 +188,8 @@ header.scrolled{
 
 .diferenciais-row {
     display: flex;
-    gap: 55px;
-    justify-self:auto;
+    gap: 50px;
+    justify-self:center;
     flex-wrap: wrap;
     margin-top: 24px;
     font-size: 14px;
@@ -325,6 +348,69 @@ header.scrolled{
     color: #4b7a5e;
     line-height: 1.8;
     margin-bottom: 16px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+    margin: 48px auto 0;
+    background-color: #f0fdf4;
+    border-radius: 16px;
+    border-left: 4px solid #16a34a;
+    box-sizing: border-box;
+}
+
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+.carousel-slide {
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 40px 48px;
+    box-sizing: border-box;
+}
+
+.depoimento-texto {
+    font-size: 17px;
+    color: #14532d;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+.depoimento-autor {
+    font-size: 14px;
+    color: #4b7a5e;
+    font-weight: 600;
+}
+
+.carousel-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.carousel-btn {
+    background-color: #16a34a;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: #15803d;
 }
 
 #agendamento {
