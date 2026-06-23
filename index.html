@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="MiniLogo.png">
     <link rel="stylesheet" href="style.css">
 </head>
-    
+
 <body>
     <!-- Barra superior do código -->
     <header>
@@ -24,8 +24,26 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
+            <div class="header-actions">
+                <a href="#" id="btn-busca" class="nav-icon-link"><img src="lupa.png" alt="Buscar" class="nav-icon" id="img-lupa"></a>
+                <a href="#" id="btn-tema" class="nav-icon-link"><img src="lua.png" alt="Tema" class="nav-icon" id="img-tema"></a>
+                <a id="btn-login" href="login.html" class="nav-login">Login</a>
+            </div>
         </div>
     </header>
+
+    <!-- Barra de busca -->
+    <div id="search-bar" class="search-bar">
+        <div class="search-inner">
+            <input type="text" id="search-input" placeholder="Buscar no site..." autocomplete="off">
+            <span id="search-counter" class="search-counter"></span>
+            <button id="btn-fechar-busca" aria-label="Fechar busca">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 
     <!-- Seção de Início -->
     <section id="inicio">
@@ -104,7 +122,7 @@
                     <h2 class="contador" data-target="35" data-prefixo="-" data-sufixo="%">0</h2>
                     <h4>Endividamento</h4>
                 </div>
-                <div class="barra-vertical"><img src="Line.png" alt="Barra"></div>
+                <div class="barra-vertical"></div>
                 <div class="impacto-card">
                     <h5>Logística</h5>
                     <h2 class="contador" data-target="24" data-prefixo="+" data-sufixo="%">0</h2>
@@ -113,7 +131,7 @@
                     <h2 class="contador" data-target="250" data-prefixo="+" data-sufixo="%">0</h2>
                     <h4>Produtividade</h4>
                 </div>
-                <div class="barra-vertical"><img src="Line.png" alt="Barra"></div>
+                <div class="barra-vertical"></div>
                 <div class="impacto-card">
                     <h5>Varejo</h5>
                     <h2 class="contador" data-target="1126" data-prefixo="" data-sufixo="">0</h2>
@@ -141,7 +159,7 @@
     <div class="carousel-track">
         <div class="carousel-slide">
             <p class="depoimento-texto">"Reduzimos 35% do nosso endividamento em 8 meses. A X Control transformou nossa visão financeira."</p>
-            <p class="depoimento-autor">— Carlos Mendes · CFO · Indústria Alimentícia</p>
+            <p class="depoimento-autor">— Carlos Mendes · CEO · Indústria Alimentícia</p>
         </div>
         <div class="carousel-slide">
             <p class="depoimento-texto">"Os relatórios gerenciais mudaram completamente a forma como tomamos decisões. Crescemos 24% em receita no primeiro ano."</p>
@@ -153,8 +171,8 @@
         </div>
     </div>
     <div class="carousel-btns">
-        <button class="carousel-btn prev">❮</button>
-        <button class="carousel-btn next">❯</button>
+        <button class="carousel-btn prev" aria-label="Depoimento anterior">❮</button>
+        <button class="carousel-btn next" aria-label="Próximo depoimento">❯</button>
     </div>
     </div>
     </section>
