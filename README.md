@@ -1,104 +1,115 @@
-# X Control — Landing Page
+# X Control — Site Institucional
 
-> Projeto Final · Desenvolvimento de Interfaces · UnB · Apresentação: 23/06/2026
-
-***
-
-## Sobre
-
-Landing page institucional da **X Control**, empresa fictícia de controladoria financeira.
-Desenvolvida com HTML5, CSS3 e JavaScript puro, seguindo princípios de UI/UX e acessibilidade WCAG 2.1 AA.
+Site institucional da **X Control**, empresa de controladoria e consultoria financeira sediada em Brasília, desenvolvido como projeto final da disciplina de Design de Interfaces.
 
 ***
 
-## Arquivos
+## Sobre o Projeto
+
+A X Control é uma consultoria financeira fundada em 2009 que atende mais de 1.000 clientes em todo o Brasil. Este site foi criado do zero usando apenas HTML, CSS e JavaScript puros — sem frameworks ou bibliotecas externas — com foco em boas práticas de desenvolvimento, acessibilidade e identidade visual consistente.
+
+***
+
+## Páginas
+
+| Arquivo | Descrição |
+|---|---|
+| `index.html` | Página principal com todas as seções do site |
+| `login.html` | Página de login com modal de recuperação de senha |
+
+***
+
+## Estrutura de Arquivos
 
 ```
-projeto/
-├── index.html    # Estrutura e conteúdo
-├── style.css     # Estilização visual
-├── script.js     # Interatividade
-├── Control.png   # Logo principal
-└── MiniLogo.png  # Favicon
+xcontrol/
+├── index.html
+├── login.html
+├── style.css
+├── script.js
+├── Control.png         ← Logo principal
+├── MiniLogo.png        ← Logo reduzida para favicon/mobile
+├── lupa.png            ← Ícone de busca
+├── lupa-hover.png      ← Ícone de busca (hover)
+├── lua.png             ← Ícone modo escuro
+├── lua-hover.png       ← Ícone modo escuro (hover)
+├── sol.png             ← Ícone modo claro
+└── sol-hover.png       ← Ícone modo claro (hover)
 ```
 
 ***
 
-## Seções
+## Seções do Site
 
-| Seção | Conteúdo |
-|-------|----------|
-| Início | Hero, badge, título, botão CTA, stats animados e diferenciais |
-| Serviços | Grid 3×2 com os 6 serviços da empresa |
-| Sobre | História, missão e diferenciais da X Control |
-| Agendamento | Formulário de contato para agendar consultoria |
-| Contato | Endereço, e-mail e telefone |
+- **Início** — Hero com card flutuante, estatísticas animadas e botões de ação
+- **Serviços** — Grade com 6 serviços oferecidos e seção de resultados de impacto com contadores
+- **Sobre** — História e missão da empresa com carrossel de depoimentos de clientes
+- **Agendamento** — Formulário de contato com validação de e-mail
+- **Contato** — Endereço, e-mails e telefones da empresa
 
 ***
 
-## Cronograma
+## Funcionalidades
 
-### ✅ Sprint 1 — 02/06/2026 (Entregue)
-Foco: HTML semântico + CSS base
+### Navegação
+- Cabeçalho fixo com link ativo automático conforme a seção visível na tela
+- Sombra no cabeçalho que aparece apenas ao rolar a página
 
-- [x] Estrutura semântica completa (`header`, `section`, `footer`, `nav`)
-- [x] Header fixo com logo e navbar centralizada
-- [x] Paleta de cores verde com conformidade WCAG AA
-- [x] Todas as 5 seções construídas
-- [x] Formulário com validação HTML5
-- [x] Hierarquia de headings correta
-- [x] Labels vinculados aos inputs
+### Busca
+- Barra de busca deslizante no cabeçalho
+- Destaca todos os termos encontrados no conteúdo da página
+- Contador de resultados e navegação entre eles com `Enter`
+- Fecha com `Esc` e limpa os destaques automaticamente
 
-### ✅ Sprint 2 — 09/06/2026 (Entregue)
-Foco: JavaScript e interatividade
+### Modo Escuro
+- Alternância entre modo claro e escuro com ícones de sol/lua
+- Todas as seções, incluindo o login, têm suporte completo ao modo escuro
 
-- [x] Header e `#inicio` com mesma cor, criando continuidade visual
-- [x] Sombra no header ao rolar a página
-- [x] Link ativo na navbar por seção visível (`IntersectionObserver`)
-- [x] Seção início completa: badge, título, CTA, stats e diferenciais
-- [x] Animação de entrada nos cards de serviço (fade + cascata)
-- [x] Scrollbar personalizada
+### Animações
+- Contadores animados nas seções de estatísticas e impacto (com suporte a prefixo e sufixo)
+- Cards de serviço entram na tela com transição suave ao serem visualizados
+- Carrossel de depoimentos com navegação por botões
 
-### 🔲 Sprint 3 — 16/06/2026
-Foco: Tailwind CSS, responsividade e acessibilidade
-
-- [ ] Integração do Tailwind CSS
-- [ ] Responsividade mobile (375px) e tablet (768px)
-- [ ] Revisão de contraste (mínimo 4.5:1 — WCAG AA)
-- [ ] Navegação por teclado e `aria-label`
-- [ ] Testes em Chrome, Firefox e Edge
-
-### 🎓 Apresentação Final — 23/06/2026
-
-- [ ] QA final em múltiplos dispositivos
-- [ ] Roteiro: problema → solução → demonstração ao vivo
+### Formulário e Login
+- Validação de e-mail em tempo real no formulário de agendamento
+- Mensagem de confirmação após envio do formulário
+- Página de login com modal de recuperação de senha
 
 ***
 
 ## Tecnologias
 
-| Tecnologia | Papel |
-|-----------|-------|
-| HTML5 | Estrutura e semântica |
-| CSS3 | Estilização e layout |
-| JavaScript ES6+ | Interatividade |
-| Tailwind CSS | Utilitários (Sprint 3) |
+| Tecnologia | Uso |
+|---|---|
+| HTML5 | Estrutura e semântica das páginas |
+| CSS3 | Estilização, modo escuro, animações e responsividade |
+| JavaScript (ES6+) | Interatividade, busca, carrossel, contadores e dark mode |
+| Canva | Criação do logotipo e de todas as imagens do site |
 
 ***
 
-## Paleta de Cores
+## Acessibilidade
 
-| Cor | Hex | Uso |
-|-----|-----|-----|
-| Verde Escuro | `#14532d` | Hero, header, footer, títulos |
-| Verde Acento | `#16a34a` | Botões e bordas de destaque |
-| Verde Hover | `#15803d` | Estado hover dos botões |
-| Fundo Suave | `#f0fdf4` | Fundo de seções alternadas |
-| Texto Secundário | `#4b7a5e` | Parágrafos e descrições |
-
-> `#14532d` sobre `#ffffff` → **10.2:1** (AAA) ✅  
-> `#16a34a` sobre `#ffffff` → **4.6:1** (AA) ✅
+As cores do site foram verificadas seguindo as diretrizes **WCAG (Web Content Accessibility Guidelines)**, garantindo contraste mínimo de 4,5:1 para textos normais tanto no modo claro quanto no modo escuro.
 
 ***
 
-*Desenvolvido por **Luis Andre Correia Sborz** — Desenvolvimento de Interfaces · 2026*
+## Como Abrir
+
+Não é necessária nenhuma instalação. Basta abrir o arquivo `index.html` diretamente no navegador, ou usar a extensão **Live Server** do VS Code para visualização com atualização em tempo real.
+
+***
+
+## Referências e Ferramentas Usadas
+
+- [W3Schools](https://www.w3schools.com) — referência de HTML, CSS e JavaScript
+- [Canva](https://www.canva.com) — criação do logotipo e imagens
+- [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) — diretrizes de acessibilidade
+- YouTube — vídeos de aprendizado sobre CSS e JavaScript
+- Claude e Google Gemini — suporte e aprendizado durante o desenvolvimento
+
+***
+
+## Autor
+Luís André Sborz
+Desenvolvido como projeto final da disciplina de Design de Interfaces — 2026.
