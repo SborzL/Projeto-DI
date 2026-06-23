@@ -1,3 +1,4 @@
+// Sombra da Navbar
 const header = document.querySelector('header');
 const navLinks = document.querySelectorAll('nav a');
 const sections = document.querySelectorAll('section');
@@ -6,6 +7,7 @@ window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 10);
 });
 
+// Mostra qual seção está visível
 if (sections.length > 0) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -27,6 +29,7 @@ if (sections.length > 0) {
     sections.forEach((section) => observer.observe(section));
 }
 
+// Contadores
 const contadores = document.querySelectorAll('.contador');
 if (contadores.length > 0) {
     const animarContador = (el) => {
@@ -60,6 +63,7 @@ if (contadores.length > 0) {
     contadores.forEach((contador) => observerContador.observe(contador));
 }
 
+// Animação dos cards de #serviço
 const cards = document.querySelectorAll('.servicos-container');
 if (cards.length > 0) {
     const observerCards = new IntersectionObserver((entries) => {
@@ -74,6 +78,7 @@ if (cards.length > 0) {
     cards.forEach((card) => observerCards.observe(card));
 }
 
+// Carrossel
 const track = document.querySelector('.carousel-track');
 if (track) {
     const slides = document.querySelectorAll('.carousel-slide');
@@ -93,6 +98,7 @@ if (track) {
     });
 }
 
+// Barra de Pesquisa
 const btnBusca = document.getElementById('btn-busca');
 if (btnBusca) {
     const imgLupa        = document.getElementById('img-lupa');
@@ -206,6 +212,7 @@ if (btnBusca) {
     }
 }
 
+// Tema Escuro
 const btnTema = document.getElementById('btn-tema');
 if (btnTema) {
     const imgTema = document.getElementById('img-tema');
@@ -225,6 +232,7 @@ if (btnTema) {
     });
 }
 
+// Esqueci minha senha
 const linkEsqueci = document.getElementById('link-esqueci');
 if (linkEsqueci) {
     const modalEsqueci   = document.getElementById('modal-esqueci');
